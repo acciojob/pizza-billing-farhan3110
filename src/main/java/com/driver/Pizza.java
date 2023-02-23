@@ -28,7 +28,7 @@ public class Pizza {
         if (!this.extraCheeseAdded) {
             this.extraCheeseAdded = true;
             this.price += 80; // add the extra cheese price to the pizza's price
-            this.bill += "Extra Cheese Added: 80\n";
+            this.bill += "80\n";
         }
     }
 
@@ -38,7 +38,7 @@ public class Pizza {
             this.extraToppingsAdded = true;
             int toppingsPrice = this.isVeg ? 70 : 120; // set the toppings price according to the type of pizza
             this.price += toppingsPrice; // add the toppings price to the pizza's price
-            this.bill += "Extra Toppings Added: " + toppingsPrice + "\n";
+            this.bill += toppingsPrice + "\n";
         }
     }
 
@@ -47,13 +47,13 @@ public class Pizza {
         if (!this.takeawayAdded) {
             this.takeawayAdded = true;
             this.price += 20; // add the paper bag price to the pizza's price
-            this.bill += "Paperbag Added: 20\n";
+            this.bill += "20\n";
         }
     }
 
     public String getBill(){
         // your code goes here
-        this.bill = "Base Price Of The Pizza: " + this.price + "\n" + this.bill + "Total Price: " + this.price + "\n";
+        this.bill =  this.bill +  this.price + "\n";
         return this.bill;
     }
 }
